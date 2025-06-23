@@ -296,9 +296,9 @@ export class SshAgentService implements OnDestroy {
 
   private async needsAuthorization(cipherId: string, isForward: boolean): Promise<boolean> {
     // Agent forwarding ALWAYS needs authorization because it is a remote machine
-    if (isForward) {
-      return true;
-    }
+    //if (isForward) {
+    //  return true;
+    //}
 
     const promptType = await firstValueFrom(this.desktopSettingsService.sshAgentPromptBehavior$);
     switch (promptType) {
